@@ -57,7 +57,7 @@ export function ReservationForm() {
   return (
     <section
       id="reservas"
-      className="py-24 bg-olive text-white relative overflow-hidden"
+      className="py-24 bg-secondary text-white relative overflow-hidden"
     >
       <div className="max-w-[1200px] mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div className="space-y-12">
@@ -140,7 +140,7 @@ export function ReservationForm() {
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                   <Calendar className="h-3 w-3 text-primary" /> Fecha
                 </label>
                 <input
@@ -155,7 +155,7 @@ export function ReservationForm() {
                 )}
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                   <Clock className="h-3 w-3 text-primary" /> Hora
                 </label>
                 <input
@@ -173,7 +173,7 @@ export function ReservationForm() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                   <Users className="h-3 w-3 text-primary" /> Comensales
                 </label>
                 <input
@@ -189,7 +189,7 @@ export function ReservationForm() {
                 )}
               </div>
               <div className="space-y-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                   <Phone className="h-3 w-3 text-primary" /> Teléfono
                 </label>
                 <input
@@ -206,7 +206,7 @@ export function ReservationForm() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                 <User className="h-3 w-3 text-primary" /> Nombre Completo
               </label>
               <input
@@ -222,7 +222,7 @@ export function ReservationForm() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-2">
+              <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/70 flex items-center gap-2">
                 <MessageSquare className="h-3 w-3 text-primary" /> Notas
                 (opcional)
               </label>

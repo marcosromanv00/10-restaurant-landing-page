@@ -38,35 +38,40 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   return (
     <ToastContext.Provider value={{ toast }}>
       {children}
-      <div className="fixed bottom-4 right-4 z-100 flex flex-col gap-2 w-full max-sm mb-4">
+      <div className="fixed bottom-4 right-4 z-100 flex flex-col gap-3 w-[calc(100%-2rem)] max-w-sm mb-4 pointer-events-none">
         <AnimatePresence>
           {toasts.map((t) => (
             <motion.div
               key={t.id}
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 20, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+              layout
               className={cn(
-                "flex items-center gap-3 rounded-lg border p-4 shadow-lg bg-card text-card-foreground",
-                t.type === "success" &&
-                  "border-green-500/50 bg-green-50/50 dark:bg-green-500/10",
-                t.type === "error" &&
-                  "border-primary/50 bg-primary/5 dark:bg-primary/10",
+                "flex items-center gap-3 rounded-xl border p-4 shadow-2xl bg-white dark:bg-card text-card-foreground pointer-events-auto",
+                t.type === "success" && "border-green-500",
+                t.type === "error" && "border-primary",
+                t.type === "info" && "border-secondary",
               )}
             >
-              {t.type === "success" && (
-                <CheckCircle className="h-5 w-5 text-green-500" />
-              )}
-              {t.type === "error" && (
-                <AlertCircle className="h-5 w-5 text-primary" />
-              )}
-              {t.type === "info" && <Info className="h-5 w-5 text-secondary" />}
-              <p className="text-sm font-medium">{t.message}</p>
+              <div className="shrink-0">
+                {t.type === "success" && (
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                )}
+                {t.type === "error" && (
+                  <AlertCircle className="h-5 w-5 text-primary" />
+                )}
+                {t.type === "info" && (
+                  <Info className="h-5 w-5 text-secondary" />
+                )}
+              </div>
+              <p className="text-sm font-semibold flex-1 pr-6">{t.message}</p>
               <button
                 onClick={() =>
                   setToasts((prev) => prev.filter((toast) => toast.id !== t.id))
                 }
-                className="ml-auto rounded-md p-1 hover:bg-muted"
+                className="absolute top-4 right-4 rounded-md p-1 hover:bg-muted transition-colors"
+                aria-label="Close"
               >
                 <X className="h-4 w-4 opacity-50" />
               </button>

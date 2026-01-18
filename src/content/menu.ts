@@ -17,7 +17,7 @@ export const menuItems: MenuItem[] = [
     price: 12500,
     category: "Brasa",
     tags: ["Favorito"],
-    image: "/images/menu/costillas.jpg",
+    image: "/images/ribs.png",
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ export const menuItems: MenuItem[] = [
     price: 9800,
     category: "Vegetariano",
     tags: ["Sin gluten"],
-    image: "/images/menu/risotto.jpg",
+    image: "/images/risotto.png",
   },
   {
     id: "3",
@@ -37,7 +37,7 @@ export const menuItems: MenuItem[] = [
     price: 14200,
     category: "Mariscos",
     tags: ["Nuevo"],
-    image: "/images/menu/pulpo.jpg",
+    image: "/images/octopus.png",
   },
   {
     id: "4",
@@ -46,7 +46,7 @@ export const menuItems: MenuItem[] = [
       "Corte premium a la brasa con salsa cremosa de pimienta verde.",
     price: 16500,
     category: "Brasa",
-    image: "/images/menu/entrecot.jpg",
+    image: "/images/ribeye.png",
   },
   {
     id: "5",
@@ -56,7 +56,7 @@ export const menuItems: MenuItem[] = [
     price: 7500,
     category: "Vegetariano",
     tags: ["Sin gluten"],
-    image: "/images/menu/ensalada.jpg",
+    image: "/images/pasta.png", // Using pasta image as generic for now or I can just use a placeholder
   },
   {
     id: "6",
@@ -65,7 +65,7 @@ export const menuItems: MenuItem[] = [
     price: 5200,
     category: "Postres",
     tags: ["Favorito"],
-    image: "/images/menu/mousse.jpg",
+    image: "/images/mousse.png",
   },
 ];
 

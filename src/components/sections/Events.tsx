@@ -48,7 +48,8 @@ export function Events() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Card 1 */}
           <Card className="group overflow-hidden rounded-2xl border border-black/5 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl bg-white dark:bg-card">
-            <div className="h-56 bg-[url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+            <div className="h-56 bg-[url('/images/event1.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+
             <div className="p-8 space-y-4">
               <div className="flex items-center gap-3 text-primary">
                 <Wine className="h-5 w-5" />
@@ -76,7 +77,8 @@ export function Events() {
 
           {/* Card 2 */}
           <Card className="group overflow-hidden rounded-2xl border border-black/5 hover:border-primary/50 transition-all shadow-sm hover:shadow-xl bg-white dark:bg-card">
-            <div className="h-56 bg-[url('https://images.unsplash.com/photo-1520245668368-2484701e3085?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+            <div className="h-56 bg-[url('/images/exp2.png')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+
             <div className="p-8 space-y-4">
               <div className="flex items-center gap-3 text-secondary">
                 <Users className="h-5 w-5" />

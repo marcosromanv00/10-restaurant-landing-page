@@ -9,9 +9,8 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
 
   React.useEffect(() => {
     const saved = localStorage.getItem("theme") as "light" | "dark";
-    if (saved) setTheme(saved);
-    else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
-      setTheme("dark");
+    if (saved === "dark") setTheme("dark");
+    else setTheme("light");
   }, []);
 
   React.useEffect(() => {

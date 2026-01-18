@@ -30,10 +30,10 @@
 
 :root {
   /* Design Tokens: Brasa & Oliva (Stitch UI Optimized) */
-  --primary: #c24f38; /* Terracotta */
+  --primary: #b3412b; /* Darker Terracotta for AA contrast */
   --primary-foreground: #ffffff;
 
-  --secondary: #4a5b45; /* Olive Green */
+  --secondary: #3d4a39; /* Darker Olive for AA contrast */
   --secondary-foreground: #ffffff;
 
   --accent: #f5f0eb; /* Sand */
@@ -46,10 +46,10 @@
   --card-foreground: #171312;
 
   --muted: #f5f0eb;
-  --muted-foreground: #6b7280;
+  --muted-foreground: #4b5563; /* Darker for better contrast */
 
-  --border: rgba(0, 0, 0, 0.05);
-  --input: #e5e7eb;
+  --border: rgba(0, 0, 0, 0.1); /* More visible border */
+  --input: #d1d5db;
   --ring: #c24f38;
 }
 
@@ -57,10 +57,10 @@
   --background: #2c2e30;
   --foreground: #f8f6f2;
 
-  --primary: #c24f38;
+  --primary: #b3412b;
   --primary-foreground: #ffffff;
 
-  --secondary: #4a5b45;
+  --secondary: #3d4a39;
   --secondary-foreground: #ffffff;
 
   --card: #1f2123;

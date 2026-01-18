@@ -79,15 +79,16 @@ export function Hero() {
         </div>
 
         <div className="relative group">
-          <div className="aspect-[4/5] relative rounded-2xl shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 overflow-hidden border-8 border-white dark:border-card/20">
+          <div className="aspect-4/5 relative rounded-2xl shadow-2xl rotate-2 group-hover:rotate-0 transition-transform duration-500 overflow-hidden border-8 border-white dark:border-card/20">
             <Image
-              src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070&auto=format&fit=crop"
+              src="/images/hero.png"
               alt="Interior del restaurante Brasa & Oliva"
               fill
               className="object-cover transition-transform duration-700 hover:scale-105"
               priority
             />
           </div>
+
           <div className="absolute -bottom-6 -left-6 bg-white dark:bg-card p-6 rounded-xl shadow-xl max-w-[200px] border border-black/5 animate-in fade-in slide-in-from-left-4 duration-700 delay-300">
             <p className="text-[10px] font-bold text-secondary uppercase tracking-widest mb-2 italic">
               Recomendación

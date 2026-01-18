@@ -55,7 +55,7 @@ export function Menu() {
           >
             <div className="w-24 h-24 relative overflow-hidden rounded-xl shrink-0 border border-black/5 bg-muted shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069"
+                src={item.image}
                 alt={item.name}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

@@ -77,13 +77,14 @@ export function Specials() {
                 transition={{ duration: 0.3 }}
               >
                 <Card className="group h-full bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-none">
-                  <div className="aspect-[3/4] overflow-hidden relative">
+                  <div className="aspect-3/4 overflow-hidden relative">
                     <Image
-                      src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop"
+                      src={item.image}
                       alt={item.name}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
+
                     <div className="absolute top-4 left-4 flex gap-2">
                       {item.tags?.map((tag) => (
                         <Badge

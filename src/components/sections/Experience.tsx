@@ -33,9 +33,9 @@ export function Experience() {
         <div className="relative order-2 lg:order-1">
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-6 pt-12">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-card/20">
+              <div className="relative aspect-3/4 rounded-2xl overflow-hidden shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-card/20">
                 <Image
-                  src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/exp1.png"
                   alt="Ambiente 1"
                   fill
                   className="object-cover"
@@ -43,7 +43,7 @@ export function Experience() {
               </div>
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-card/20">
                 <Image
-                  src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop"
+                  src="/images/exp2.png"
                   alt="Ambiente 2"
                   fill
                   className="object-cover"
@@ -53,15 +53,15 @@ export function Experience() {
             <div className="space-y-6">
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-card/20">
                 <Image
-                  src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=1935&auto=format&fit=crop"
+                  src="/images/pasta.png"
                   alt="Ambiente 3"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl rotate-[2deg] hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-card/20">
+              <div className="relative aspect-3/4 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-card/20">
                 <Image
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop"
+                  src="/images/ribeye.png"
                   alt="Ambiente 4"
                   fill
                   className="object-cover"
