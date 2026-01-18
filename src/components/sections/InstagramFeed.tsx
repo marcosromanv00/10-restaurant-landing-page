@@ -6,42 +6,12 @@ import Image from "next/image";
 import { siteConfig } from "@/content/site";
 
 const INSTA_POSTS = [
-  {
-    id: 1,
-    likes: "1.2k",
-    comments: 45,
-    img: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069",
-  },
-  {
-    id: 2,
-    likes: "892",
-    comments: 23,
-    img: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070",
-  },
-  {
-    id: 3,
-    likes: "2.1k",
-    comments: 67,
-    img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974",
-  },
-  {
-    id: 4,
-    likes: "754",
-    comments: 12,
-    img: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070",
-  },
-  {
-    id: 5,
-    likes: "1.5k",
-    comments: 89,
-    img: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=1935",
-  },
-  {
-    id: 6,
-    likes: "1.1k",
-    comments: 54,
-    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070",
-  },
+  { id: 1, likes: "1.2k", comments: 45, img: "/images/insta1.png" },
+  { id: 2, likes: "892", comments: 23, img: "/images/insta2.png" },
+  { id: 3, likes: "2.1k", comments: 67, img: "/images/insta3.png" },
+  { id: 4, likes: "754", comments: 12, img: "/images/insta4.png" },
+  { id: 5, likes: "1.5k", comments: 89, img: "/images/insta5.png" },
+  { id: 6, likes: "1.1k", comments: 54, img: "/images/insta6.png" },
 ];
 
 export function InstagramFeed() {
@@ -60,7 +30,7 @@ export function InstagramFeed() {
           </div>
           <button
             onClick={() => window.open(siteConfig.links.instagram)}
-            className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-card rounded-xl border border-black/5 font-bold shadow-sm hover:shadow-xl transition-all duration-300"
+            className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-card rounded-xl border border-black/5 font-bold shadow-sm hover:shadow-xl transition-all duration-300 pointer-events-auto"
           >
             <Instagram className="h-5 w-5 text-primary" />
             <span>Seguir en Instagram</span>

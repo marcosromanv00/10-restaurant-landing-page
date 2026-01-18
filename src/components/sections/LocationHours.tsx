@@ -2,7 +2,7 @@
 
 import { siteConfig } from "@/content/site";
 import { Button } from "@/components/ui/Button";
-import { MapPin, Phone, ArrowUpRight, Mail, Star } from "lucide-react";
+import { MapPin, Phone, ArrowUpRight, Clock, Mail, Star } from "lucide-react";
 import Image from "next/image";
 
 interface TestimonialProps {
@@ -24,13 +24,13 @@ export function LocationHours() {
           <h3 className="text-3xl font-bold serif-text">¿Dónde estamos?</h3>
           <div className="aspect-video bg-sand rounded-2xl relative overflow-hidden group shadow-lg border border-black/5">
             <Image
-              src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2033&auto=format&fit=crop"
+              src="/images/map.png"
               alt="Ubicación de Brasa & Oliva"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale opacity-90"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-            <div className="absolute bottom-4 left-4 right-4 bg-white dark:bg-card p-4 rounded-lg shadow-lg flex items-center justify-between border border-black/5 backdrop-blur-sm">
+            <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+            <div className="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-card/90 p-4 rounded-lg shadow-lg flex items-center justify-between border border-black/5 backdrop-blur-md">
               <div>
                 <p className="text-[10px] font-bold uppercase text-primary mb-1 tracking-widest">
                   Dirección
@@ -46,6 +46,7 @@ export function LocationHours() {
               <Button
                 className="rounded-full bg-white text-primary hover:bg-white/90 shadow-xl border-none"
                 size="sm"
+                asChild
               >
                 <a
                   href={siteConfig.links.maps}
@@ -91,7 +92,10 @@ export function LocationHours() {
                 </li>
               </ul>
               <div className="mt-8">
-                <Button className="w-full bg-secondary text-white rounded-xl py-6 font-bold uppercase tracking-widest text-xs border-none shadow-lg shadow-secondary/20">
+                <Button
+                  className="w-full bg-secondary text-white rounded-xl py-6 font-bold uppercase tracking-widest text-sm border-none shadow-lg shadow-secondary/20"
+                  asChild
+                >
                   <a href={`tel:${siteConfig.phone}`}>Llamar ahora</a>
                 </Button>
               </div>
