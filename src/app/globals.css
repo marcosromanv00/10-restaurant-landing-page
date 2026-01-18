@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+  --radius-sm: 0.25rem;
+}
+
+:root {
+  /* Design Tokens: Brasa & Oliva */
+  --primary: #c2410c; /* Terracotta / Rojo Arcilla */
+  --primary-foreground: #fffcf2;
+
+  --secondary: #364935; /* Verde Oliva Oscuro */
+  --secondary-foreground: #fffcf2;
+
+  --accent: #d97706; /* Amber / Honey */
+  --accent-foreground: #fffcf2;
+
+  --background: #fffcf2; /* Marfil / Arena muy clara */
+  --foreground: #1c1917; /* Carbón */
+
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+
+  --muted: #f5f5f4;
+  --muted-foreground: #57534e;
+
+  --border: #e7e5e4;
+  --input: #e7e5e4;
+  --ring: #c2410c;
+
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #1c1917;
+  --foreground: #fffcf2;
+
+  --primary: #ea580c;
+  --primary-foreground: #fffcf2;
+
+  --secondary: #4a5d49;
+  --secondary-foreground: #fffcf2;
+
+  --card: #292524;
+  --card-foreground: #fffcf2;
+
+  --muted: #292524;
+  --muted-foreground: #a8a29e;
+
+  --border: #44403c;
+  --input: #44403c;
+  --ring: #ea580c;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
