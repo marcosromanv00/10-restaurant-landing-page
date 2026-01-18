@@ -17,8 +17,9 @@ export const siteConfig = {
   links: {
     instagram: "https://instagram.com/brasayoliva",
     facebook: "https://facebook.com/brasayoliva",
-    maps: "https://goo.gl/maps/placeholder",
+    maps: "https://www.google.com/maps/search/?api=1&query=Barrio+Escalante,+San+José,+Costa+Rica",
   },
+
   stats: {
     rating: "4.8",
     distance: "A 5 min del centro",

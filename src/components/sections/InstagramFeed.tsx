@@ -28,13 +28,15 @@ export function InstagramFeed() {
               <span className="text-primary font-bold">@brasayoliva</span>
             </p>
           </div>
-          <button
-            onClick={() => window.open(siteConfig.links.instagram)}
+          <a
+            href={siteConfig.links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-8 py-4 bg-white dark:bg-card rounded-xl border border-black/5 font-bold shadow-sm hover:shadow-xl transition-all duration-300 pointer-events-auto"
           >
             <Instagram className="h-5 w-5 text-primary" />
             <span>Seguir en Instagram</span>
-          </button>
+          </a>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
