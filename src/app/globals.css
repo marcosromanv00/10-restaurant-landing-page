@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  --font-sans:
+    var(--font-manrope), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif:
+    var(--font-noto-serif), ui-serif, Georgia, Cambria, "Times New Roman",
+    Times, serif;
+
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -17,57 +24,54 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --radius-lg: 0.75rem;
-  --radius-md: 0.5rem;
-  --radius-sm: 0.25rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
 }
 
 :root {
-  /* Design Tokens: Brasa & Oliva */
-  --primary: #c2410c; /* Terracotta / Rojo Arcilla */
-  --primary-foreground: #fffcf2;
+  /* Design Tokens: Brasa & Oliva (Stitch UI Optimized) */
+  --primary: #c24f38; /* Terracotta */
+  --primary-foreground: #ffffff;
 
-  --secondary: #364935; /* Verde Oliva Oscuro */
-  --secondary-foreground: #fffcf2;
+  --secondary: #4a5b45; /* Olive Green */
+  --secondary-foreground: #ffffff;
 
-  --accent: #d97706; /* Amber / Honey */
-  --accent-foreground: #fffcf2;
+  --accent: #f5f0eb; /* Sand */
+  --accent-foreground: #171312;
 
-  --background: #fffcf2; /* Marfil / Arena muy clara */
-  --foreground: #1c1917; /* Carbón */
+  --background: #f8f6f2; /* Warm Ivory */
+  --foreground: #171312;
 
   --card: #ffffff;
-  --card-foreground: #1c1917;
+  --card-foreground: #171312;
 
-  --muted: #f5f5f4;
-  --muted-foreground: #57534e;
+  --muted: #f5f0eb;
+  --muted-foreground: #6b7280;
 
-  --border: #e7e5e4;
-  --input: #e7e5e4;
-  --ring: #c2410c;
-
-  --radius: 0.5rem;
+  --border: rgba(0, 0, 0, 0.05);
+  --input: #e5e7eb;
+  --ring: #c24f38;
 }
 
 .dark {
-  --background: #1c1917;
-  --foreground: #fffcf2;
+  --background: #2c2e30;
+  --foreground: #f8f6f2;
 
-  --primary: #ea580c;
-  --primary-foreground: #fffcf2;
+  --primary: #c24f38;
+  --primary-foreground: #ffffff;
 
-  --secondary: #4a5d49;
-  --secondary-foreground: #fffcf2;
+  --secondary: #4a5b45;
+  --secondary-foreground: #ffffff;
 
-  --card: #292524;
-  --card-foreground: #fffcf2;
+  --card: #1f2123;
+  --card-foreground: #f8f6f2;
 
-  --muted: #292524;
-  --muted-foreground: #a8a29e;
+  --muted: #3d4043;
+  --muted-foreground: #9ca3af;
 
-  --border: #44403c;
-  --input: #44403c;
-  --ring: #ea580c;
+  --border: rgba(255, 255, 255, 0.05);
+  --input: #3d4043;
+  --ring: #c24f38;
 }
 
 * {
@@ -81,4 +85,16 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.serif-text {
+  font-family: var(--font-serif);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(248, 246, 242, 0) 0%,
+    rgba(248, 246, 242, 1) 100%
+  );
 }

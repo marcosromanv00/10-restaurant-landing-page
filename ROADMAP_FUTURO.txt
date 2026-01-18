@@ -1,0 +1,24 @@
+# Roadmap de Mejoras Técnicas - Brasa & Oliva
+
+Este documento detalla las mejoras que requieren infraestructura de servidor, bases de datos o integraciones de terceros complejas.
+
+## 1. Backend y Persistencia Real
+- **Base de Datos (PostgreSQL/MongoDB)**: Migrar de localStorage a una base de datos real para gestionar disponibilidad de mesas y historial de pedidos.
+- **Autenticación (NextAuth.js / Clerk)**: Permitir que los clientes tengan perfiles, vean puntos de fidelidad y pedidos anteriores.
+- **Webhooks**: Integrar webhooks para recibir actualizaciones de estado de pagos en tiempo real.
+
+## 2. Integraciones de APIs Externas
+- **WhatsApp Business API**: Conexión oficial con proveedores como Twilio o Vonage para enviar confirmaciones automáticas y recordatorios de reserva 2h antes.
+- **Google Maps Platform**: Sustituir el mapa estático por el API de JavaScript con Street View y cálculo de rutas dinámico.
+- **Pasarelas de Pago (Stripe / BAC Credomatic)**: Implementar Checkout para pagos con tarjeta de crédito/débito en pedidos para recoger.
+
+## 3. Gestión de Contenido (CMS)
+- **CMS Headless (Sanity.io o Contentful)**: Permitir que el administrador del restaurante cambie precios, descripciones y fotos del menú desde un panel tipo blog sin depender de un programador.
+
+## 4. Infraestructura Avanzada
+- **PWA (Progressive Web App)**: Configuración de Service Workers para funcionamiento offline básico y "Adición a pantalla de inicio" en móviles.
+- **Edge Functions**: Lógica de geolocalización en el borde (Vercel Edge) para mostrar el horario de apertura ajustado a la zona horaria del visitante y ofertas locales.
+
+## 5. Marketing Automatizado
+- **Email Marketing (Resend / Mailchimp)**: Automatización de correos tras una reserva o suscripción al newsletter con cupones dinámicos.
+- **Analytics Avanzado**: Integración de Google Analytics 4 y Hotjar para entender el embudo de conversión (donde abandonan los usuarios el proceso de reserva).

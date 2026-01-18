@@ -3,25 +3,20 @@
 import * as React from "react";
 import Image from "next/image";
 import { specialties, MenuItem } from "@/content/menu";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/Card";
+import { Card, CardDescription } from "@/components/ui/Card";
+
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { formatCurrency } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Specials() {
-  const [filter, setFilter] = React.useState<MenuItem["category"] | "Todos">(
-    "Todos",
+  const [filter, setFilter] = React.useState<MenuItem["category"] | "Todo">(
+    "Todo",
   );
 
-  const categories: ("Todos" | MenuItem["category"])[] = [
-    "Todos",
+  const categories: ("Todo" | MenuItem["category"])[] = [
+    "Todo",
     "Brasa",
     "Vegetariano",
     "Mariscos",
@@ -29,38 +24,48 @@ export function Specials() {
   ];
 
   const filteredSpecials =
-    filter === "Todos"
+    filter === "Todo"
       ? specialties
       : specialties.filter((item) => item.category === filter);
 
   return (
-    <section id="especialidades" className="py-24 bg-card">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold">
-            Nuestras Especialidades
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Una selección de nuestros platos más emblemáticos, donde la
-            tradición se encuentra con la innovación.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-2 pt-6">
+    <section
+      id="especialidades"
+      className="py-24 bg-[#f5f0eb]/30 dark:bg-card/5"
+    >
+      <div className="max-w-[1200px] mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-12 mb-16">
+          <div className="space-y-4 flex-1">
+            <h3 className="text-4xl font-bold serif-text">
+              Especialidades de la Casa
+            </h3>
+            <p className="text-muted-foreground max-w-xl leading-relaxed">
+              Una selección cuidada de nuestros platos más emblemáticos, donde
+              la tradición se encuentra con la innovación.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
             {categories.map((cat) => (
-              <Button
+              <button
                 key={cat}
-                variant={filter === cat ? "primary" : "outline"}
-                size="sm"
-                className="rounded-full"
                 onClick={() => setFilter(cat)}
+                className={cn(
+                  "flex h-10 items-center justify-center px-6 rounded-full transition-all text-sm font-bold",
+                  filter === cat
+                    ? "bg-primary text-white shadow-lg shadow-primary/20"
+                    : "bg-white dark:bg-card border border-black/5 hover:bg-white/80 dark:hover:bg-card/80",
+                )}
               >
                 {cat}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
 
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           <AnimatePresence mode="popLayout">
             {filteredSpecials.map((item) => (
               <motion.div
@@ -71,41 +76,48 @@ export function Specials() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="h-full overflow-hidden group hover:shadow-xl transition-all duration-300">
-                  <div className="relative aspect-video overflow-hidden">
+                <Card className="group h-full bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border-none">
+                  <div className="aspect-[3/4] overflow-hidden relative">
                     <Image
-                      src={`https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop`}
+                      src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop"
                       alt={item.name}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">
                       {item.tags?.map((tag) => (
                         <Badge
                           key={tag}
                           variant={tag === "Favorito" ? "accent" : "secondary"}
+                          className="shadow-sm border-none backdrop-blur-md bg-white/80 dark:bg-card/80 text-foreground"
                         >
                           {tag}
                         </Badge>
                       ))}
                     </div>
                   </div>
-                  <CardHeader>
+                  <div className="p-6 space-y-4">
                     <div className="flex justify-between items-start gap-4">
-                      <CardTitle className="text-xl">{item.name}</CardTitle>
-                      <span className="font-bold text-primary">
+                      <div>
+                        <h4 className="text-lg font-bold serif-text group-hover:text-primary transition-colors">
+                          {item.name}
+                        </h4>
+                        <CardDescription className="line-clamp-2 pt-1 font-medium italic">
+                          {item.description}
+                        </CardDescription>
+                      </div>
+                      <span className="text-primary font-extrabold text-lg">
                         {formatCurrency(item.price)}
                       </span>
                     </div>
-                    <CardDescription className="line-clamp-2 pt-2">
-                      {item.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <Button variant="outline" className="w-full">
-                      Saber más
+                    <Button
+                      variant="outline"
+                      className="w-full py-6 rounded-xl border-primary/20 text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all duration-300 border"
+                      onClick={() => (window.location.hash = "#menu")}
+                    >
+                      Ver en el menú
                     </Button>
-                  </CardContent>
+                  </div>
                 </Card>
               </motion.div>
             ))}
@@ -115,3 +127,6 @@ export function Specials() {
     </section>
   );
 }
+
+// Added cn import that I forgot initially
+import { cn } from "@/lib/utils";
