@@ -21,6 +21,25 @@ Una plantilla de Landing Page para restaurantes diseñada meticulosamente para *
 
 👉 **[Ver Proyecto Desplegado](https://10-restaurant-landing-page.vercel.app/)**
 
+## 📸 Galería
+
+<!-- COMIENZO DE LA GALERÍA -->
+
+<div align="center">
+    <img src="https://via.placeholder.com/800x450?text=Home+Page" alt="Home Page" />
+    <br>
+    <em>Diseño elegante y minimalista</em>
+</div>
+
+<br>
+
+<div align="center">
+    <img src="https://via.placeholder.com/400x300?text=Menu+Preview" alt="Menu" />
+    <img src="https://via.placeholder.com/400x300?text=Reservations" alt="Reservations" />
+</div>
+
+<!-- FIN DE LA GALERÍA -->
+
 ## 🛠️ Stack
 
 *   **Framework**: React (Vite)
